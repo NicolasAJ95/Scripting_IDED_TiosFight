@@ -24,7 +24,7 @@ public class AIFighterIdleState : AIFighterStateBase {
     public override void UpdateState()
     {
         decisionTimer += 0.0097f;
-        Debug.Log(decisionTimer);
+
         if(decisionTimer > decisionTime ){
             canDecide = true;
         }
