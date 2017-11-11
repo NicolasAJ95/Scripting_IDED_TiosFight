@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7b3441c563f7d9349b9091eb12ec95b5
+timeCreated: 1509417835
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mortal Kombat Mythologies
+  fontNames:
+  - Mortal Kombat Mythologies
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
