@@ -7,6 +7,7 @@ TagManager:
   - Fighter
   - Shield
   - Wall
+  - HitCollider
   layers:
   - Default
   - TransparentFX

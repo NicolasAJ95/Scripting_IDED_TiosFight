@@ -5,6 +5,8 @@ using UnityEngine;
 public class AIFighterBlockState : AIFighterStateBase {
 
     private float healthLimit;
+    
+    private float timer;
 
     public AIFighterBlockState(AIFighter controlled) : base(controlled)
     {
@@ -13,13 +15,16 @@ public class AIFighterBlockState : AIFighterStateBase {
 
     public override void StartState()
     {
-        healthLimit = RandomHitsLimit(0, 60);
+        timer = 0.0f;
+        healthLimit = RandomHitsLimit(0, 40);
         controlledFighter.myFighter.Block(true);
     }
 
     public override void UpdateState()
     {
-        if (controlledFighter.myFighter.MyShield.Health < healthLimit)
+        timer += 0.0097f;
+        
+        if (controlledFighter.myFighter.MyShield.Health < healthLimit || timer > 8.0f)
         {
             ToIdle();
         }
@@ -27,7 +32,7 @@ public class AIFighterBlockState : AIFighterStateBase {
     }
 
     private void ToIdle() {
-
+        controlledFighter.myFighter.Block(false);
         controlledFighter.myFighter.NumberOfHits = 0;
         controlledFighter.MakeTransition(AIFighterState.Idle);
     }

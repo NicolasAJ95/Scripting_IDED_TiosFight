@@ -61,6 +61,7 @@ public class Fighter : MonoBehaviour {
 	[SerializeField]
 	private Collider2D specialHitCollider;
 
+
     #endregion
 
 #region Getters/Setters
@@ -185,12 +186,16 @@ public class Fighter : MonoBehaviour {
 	}
 	public void ApplyForce(float damageForce)
 	{
+        var bloodP = BloodPool.Instance.GetBlood();
+        bloodP.transform.position = transform .position + new Vector3(0,3,-1);
         if(transform.localScale.x > 0)
         {
+            bloodP .transform .localScale=new Vector3(-1,1,1);
             Debug.Log("Force applied");
             myRigidbody2D.AddForce(-transform.right * damageForce, ForceMode2D.Impulse);
         }	else if (transform.localScale.x < 0)
         {
+            bloodP .transform .localScale=new Vector3(1,1,1);
             Debug.Log("Force applied");
             myRigidbody2D.AddForce(transform.right * damageForce, ForceMode2D.Impulse);
         }

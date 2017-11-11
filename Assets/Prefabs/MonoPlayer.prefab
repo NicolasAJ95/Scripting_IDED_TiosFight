@@ -389,8 +389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   simpleHitDamage: 5
-  specialHitDamage: 15
-  specialHitForce: 3
+  specialHitDamage: 10
+  specialHitForce: 2
   canAttack: 0
   isBlocking: 0
   isReceivingDamage: 0

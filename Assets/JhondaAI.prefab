@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114525697730205864}
   m_Layer: 0
   m_Name: SpecialHitCollider
-  m_TagString: Untagged
+  m_TagString: HitCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 114213358464429408}
   m_Layer: 0
   m_Name: SimpleHitCollider
-  m_TagString: Untagged
+  m_TagString: HitCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,8 +394,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   simpleHitDamage: 5
-  specialHitDamage: 15
-  specialHitForce: 3
+  specialHitDamage: 10
+  specialHitForce: 2
   canAttack: 0
   isBlocking: 0
   isReceivingDamage: 0
@@ -408,6 +408,10 @@ MonoBehaviour:
   specialHitCol_CD: 0.3
   simpleHitCollider: {fileID: 61650636059791460}
   specialHitCollider: {fileID: 61174013378912420}
+  source: {fileID: 0}
+  swoosh: {fileID: 0}
+  punch: {fileID: 0}
+  ouch: {fileID: 0}
 --- !u!212 &212082233784391206
 SpriteRenderer:
   m_ObjectHideFlags: 1
